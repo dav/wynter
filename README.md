@@ -13,9 +13,10 @@ Use `asdf install`.
 
 Run `mix deps.get` to install the project dependencies.
 
-Make sure your bot's Slack API token is set in `.env`. 
+Copy `.env.example` to `.env` and make sure your bot's Slack API token is set in it.
+
 So far this has been developed using a custom integration bot.
-Check at the URL https://*Your Slack Channel Name*.slack.com/apps/manage/custom-integrations
+Check at the URL https://*YourSlackChannelName*.slack.com/apps/manage/custom-integrations
 
 Until a better method is figured out, for interactive testing, it probably makes sense 
 to have your own bot token and not use the "production" one, otherwise strange things may happen.
