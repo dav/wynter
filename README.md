@@ -1,6 +1,6 @@
 # Wynter
 
-A Slack bot.
+A Slack bot based on [BlakeWilliams/Elixir-Slack](https://github.com/BlakeWilliams/Elixir-Slack)
 
 ## Installation
 
