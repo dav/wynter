@@ -23,8 +23,10 @@ defmodule Wynter.MixProject do
     [
       {:calendar, "~> 1.0"},
       {:envy, "~> 1.1.1"},
+      {:poison, "~> 4.0"},
       {:remix, "~> 0.0.1", only: :dev},
-      {:slack, "~> 0.23.5"}
+      {:slack, "~> 0.23.5"},
+      {:tzdata, "~> 1.1"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
