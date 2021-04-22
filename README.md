@@ -1,10 +1,12 @@
 # Wynter
 
 A Slack bot based on [BlakeWilliams/Elixir-Slack](https://github.com/BlakeWilliams/Elixir-Slack)
+intended for use and development by a private Slack team I am on. This is my first Elixir project
+so take that as a warning on quality of code and approaches.
 
 ## Installation
 
-You could just install Elixir (and of course Erlang) however, but this project has
+You could just install Elixir (and of course Erlang), however this project has
 a `.tool-versions` file to lock it to certain language versions, so
 ideally first ensure [ASDF](https://asdf-vm.com/#/) is installed.
 This [guide](https://app.pluralsight.com/guides/installing-elixir-erlang-with-asdf) may be helpful. 
