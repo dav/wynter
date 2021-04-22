@@ -2,37 +2,7 @@ defmodule SlackRtm do
   use Slack
 
   def handle_connect(slack, state) do
-    IO.puts "handle_connect: Connected as #{slack.me.name}"
-
-    IO.puts "Me info:"
-    for {key, value} <- slack.me do
-      if is_map(value) do
-          IO.puts "  #{key} => (is a map)"
-        else
-          IO.puts "  #{key} => #{value}"
-      end
-    end
-
-    token = System.get_env("SLACK_API_TOKEN")
-    slack
-    |> Map.put(:channels, Slack.Web.Conversations.list(%{token: token}) |> Map.get("channels"))
-    |> Map.put(:ims, Slack.Web.Im.list(%{token: token}) |> Map.get("ims"))
-    |> Map.put(:users, Slack.Web.Users.list(%{token: token}) |> Map.get("members"))
-
-    IO.puts "Channels:"
-    for {key, value} <- slack.channels do
-      IO.puts "  #{key} => #{value}"
-    end
-
-    IO.puts "Users:"
-    for {key, value} <- slack.users do
-      IO.puts "  #{key} => #{value}"
-    end
-
-    IO.puts "IMs:"
-    for {key, value} <- slack.ims do
-      IO.puts "  #{key} => #{value}"
-    end
+    dump_slack_info(slack)
 
     {:ok, state}
   end
@@ -40,7 +10,11 @@ defmodule SlackRtm do
   def handle_event(message = %{type: "message"}, slack, state) do
     print_named_map("Message", message)
 
-    send_message("handle_event: did someone say '#{message.text}'?", message.channel, slack)
+    response = case message.text do
+      "time" -> "The current time is #{DateTime.to_string(Calendar.DateTime.now! "America/Los_Angeles")}"
+      _ -> "Did someone say '#{message.text}'?"
+    end
+    send_message(response, message.channel, slack)
 
     {:ok, state}
   end
@@ -70,4 +44,39 @@ defmodule SlackRtm do
       end
     end
   end
+
+  defp dump_slack_info(slack) do
+    IO.puts "handle_connect: Connected as #{slack.me.name}"
+
+    IO.puts "Me info:"
+    for {key, value} <- slack.me do
+      if is_map(value) do
+        IO.puts "  #{key} => (is a map)"
+      else
+        IO.puts "  #{key} => #{value}"
+      end
+    end
+
+    token = System.get_env("SLACK_API_TOKEN")
+    slack
+    |> Map.put(:channels, Slack.Web.Conversations.list(%{token: token}) |> Map.get("channels"))
+    |> Map.put(:ims, Slack.Web.Im.list(%{token: token}) |> Map.get("ims"))
+    |> Map.put(:users, Slack.Web.Users.list(%{token: token}) |> Map.get("members"))
+
+    IO.puts "Channels:"
+    for {key, value} <- slack.channels do
+      IO.puts "  #{key} => #{value}"
+    end
+
+    IO.puts "Users:"
+    for {key, value} <- slack.users do
+      IO.puts "  #{key} => #{value}"
+    end
+
+    IO.puts "IMs:"
+    for {key, value} <- slack.ims do
+      IO.puts "  #{key} => #{value}"
+    end
+  end
+
 end
