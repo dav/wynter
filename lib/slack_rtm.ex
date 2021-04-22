@@ -9,11 +9,7 @@ defmodule SlackRtm do
 
   def handle_event(message = %{type: "message"}, slack, state) do
     print_named_map("Message", message)
-
-    response = case message.text do
-      "time" -> "The current time is #{DateTime.to_string(Calendar.DateTime.now! "America/Los_Angeles")}"
-      _ -> "Did someone say '#{message.text}'?"
-    end
+    response = Wynter.handle_incoming_slack_message(message, slack, state)
     send_message(response, message.channel, slack)
 
     {:ok, state}

@@ -4,15 +4,12 @@ defmodule Wynter do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Wynter.hello()
-      :world
-
+  Handle incoming slack message.
   """
-  def hello do
-    :world
+  def handle_incoming_slack_message(message, _, _) do
+    case message.text do
+      "time" -> "The current time is #{DateTime.to_string(Calendar.DateTime.now! "America/Los_Angeles")}"
+      _ -> "Did someone say '#{message.text}'?"
+    end
   end
 end
