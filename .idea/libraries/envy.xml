@@ -1,7 +1,19 @@
 <component name="libraryTable">
   <library name="envy" type="mix">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/envy/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/envy/ebin" />
+    </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/envy/lib" />
+      <root url="file://$PROJECT_DIR$/deps/envy/lib" />
+    </SOURCES>
   </library>
 </component>

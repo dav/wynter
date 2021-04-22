@@ -5,9 +5,19 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/calendar/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/calendar/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/calendar/lib" />
+      <root url="file://$PROJECT_DIR$/deps/calendar/lib" />
       <root url="file://$PROJECT_DIR$/deps/calendar/lib" />
       <root url="file://$PROJECT_DIR$/deps/calendar/lib" />
     </SOURCES>
