@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 
-.PHONY: console deps test
+.PHONY: console deps test format
 
 deps:
 	mix deps.get
@@ -10,3 +10,6 @@ console:
 
 test:
 	mix test
+
+format:
+	mix format

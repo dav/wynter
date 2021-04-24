@@ -24,8 +24,9 @@ defmodule Powerball do
   end
 
   defp process_response_body(body) do
-    [first | _] = body
-    |> Poison.decode!()
+    [first | _] =
+      body
+      |> Poison.decode!()
 
     first
     |> Enum.map(fn {k, v} -> {String.to_atom(k), v} end)

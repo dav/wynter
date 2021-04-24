@@ -6,17 +6,18 @@ defmodule WynterTest do
     message = %{
       type: "message",
       channel: "test-channel",
-      text: "time"
+      text: ".time"
     }
 
     slack = %{}
     state = %{state: "yup"}
 
-    response = Wynter.handle_incoming_slack_message(message, slack, state)
-    assert String.contains?(response, "The current time is")
+    {status, response_string} = Wynter.handle_incoming_slack_message(message, slack, state)
+    assert status == :respond
+    assert String.contains?(response_string, "The current time is")
   end
 
-  test "echoes" do
+  test "ignores unknown" do
     message = %{
       type: "message",
       channel: "test-channel",
@@ -26,7 +27,7 @@ defmodule WynterTest do
     slack = %{}
     state = %{state: "yup"}
 
-    expected_response = "Did someone say '#{message.text}'?"
+    expected_response = {:ignored, message}
     response = Wynter.handle_incoming_slack_message(message, slack, state)
     assert response == expected_response
   end
