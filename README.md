@@ -11,7 +11,15 @@ a `.tool-versions` file to lock it to certain language versions, so
 ideally first ensure [ASDF](https://asdf-vm.com/#/) is installed.
 This [guide](https://app.pluralsight.com/guides/installing-elixir-erlang-with-asdf) may be helpful. 
 
-Use `asdf install`.
+Make sure you are in the repo dir.
+
+If you just installed `ASDF` then also install these plugins:
+```angular2html
+asdf plugin add erlang
+asdf plugin add elixir
+```
+
+Use `asdf install`. 
 
 Run `mix deps.get` to install the project dependencies.
 
