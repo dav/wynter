@@ -37,7 +37,9 @@ defmodule Wynter do
   end
 
   def current_powerball_status do
-    case Powerball.estimated_jackpot() do
+    {:ok, client} = GenServer.start_link(PowerballClient, "https://powerball.com")
+
+    case PowerballClient.get_estimated_jackpot(client) do
       {:ok, data} ->
         "The current #{data[:title]} is #{data[:field_prize_amount]} on #{
           to_usa_date_string(data[:field_next_draw_date])

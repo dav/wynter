@@ -9,9 +9,15 @@
       <root url="file://$PROJECT_DIR$/_build/test/lib/websocket_client/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/websocket_client/ebin" />
       <root url="file://$PROJECT_DIR$/_build/test/lib/websocket_client/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/websocket_client/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/websocket_client/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/websocket_client/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/websocket_client/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/websocket_client/src" />
+      <root url="file://$PROJECT_DIR$/deps/websocket_client/src" />
       <root url="file://$PROJECT_DIR$/deps/websocket_client/src" />
       <root url="file://$PROJECT_DIR$/deps/websocket_client/src" />
     </SOURCES>
