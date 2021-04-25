@@ -27,8 +27,6 @@ defmodule Wynter.Application do
           ]
       end
 
-    IO.inspect(Mix.env())
-
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Wynter.Supervisor]

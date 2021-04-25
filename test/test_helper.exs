@@ -5,7 +5,4 @@ unless Mix.env() == :prod do
   Envy.auto_load()
 end
 
-tuple = Calendar.DateTime.now!("America/Los_Angeles")
-IO.inspect(tuple)
-
 ExUnit.start()
